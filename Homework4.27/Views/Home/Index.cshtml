@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<Homework4._27.Data.Post>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        @foreach (var post in Model)
+        {
+            <div class="well" style="margin-bottom: 40px; text-align: center;">
+                <a href="/home/viewpost?id=@post.Id">
+                    <h3>@post.Title</h3>
+                    <h5>Submitted on: @post.DateSubmitted.ToLongDateString()</h5>
+                    <img width="400" src="@post.Image" />
+                </a>
+            </div>
+        }
+    </div>
+</div>

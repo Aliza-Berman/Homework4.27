@@ -1,0 +1,19 @@
+﻿@using Homework4._27.Data
+@model Post
+
+<div class="well text-center">
+    <h1>@Model.Title</h1>
+    <br />
+    <img width="500" src="@Model.Image" />
+    <br />
+    <div class="col-md-6 offset-3 well">
+        <button class="btn btn-danger" id="like-btn" value="@Model.Id">Like</button>
+        <h4 id="likes-count"></h4>
+    </div>
+
+</div>
+@section Scripts{
+    <script src="~/js/post.js"></script>
+
+}
+
